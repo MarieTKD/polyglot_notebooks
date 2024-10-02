@@ -5,3 +5,7 @@
 #!csharp
 
 Console.WriteLine("Hello Polyglot Notebook!");
+
+#!csharp
+
+Console.WriteLine("Hello again");

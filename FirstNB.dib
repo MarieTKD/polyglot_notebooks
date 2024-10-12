@@ -9,3 +9,58 @@ Console.WriteLine("Hello Polyglot Notebook!");
 #!csharp
 
 Console.WriteLine("Hello again");
+
+#!csharp
+
+int i = 1;
+i
+
+#!csharp
+
+int CountOddNumbers(int input)
+{
+    double divResult = input/2.0;
+    return (int)Math.Ceiling((divResult));
+}
+
+#!csharp
+
+CountOddNumbers(5)
+
+#!markdown
+
+# Declaring classes
+
+#!csharp
+
+public class Book
+{
+    public required string Title {get; init;}
+    public required string Author {get; init;}
+    public required string ISBN {get; init;}
+}
+
+#!csharp
+
+Book thisBook = new() {
+    Title = "Data Science with .NET and Polyglot Notebooks",
+    Author = "Matt Eland",
+    ISBN = "978-1-83588-296-2"
+};
+
+Console.WriteLine($"You are currently reading {thisBook.Title}");
+thisBook
+
+#!fsharp
+
+let mutable maxNum = 15
+
+let fizzbuzz n =
+    match n with
+        | n when n % 15 = 0 -> "FizzBuzz"
+        | n when n % 5 = 0 -> "Buzz"
+        | n when n % 3 = 0 -> "Fizz"
+        |_ -> n.ToString ()
+
+[1..maxNum]
+|> Seq.iter (fun x -> printf "%s " (fizzbuzz x))
